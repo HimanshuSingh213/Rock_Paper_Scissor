@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <!-- Game UI Skeleton -->
+    <div class="container">
+        <h1>Rock Paper Scissor Game</h1>
+        <div class="competitors">
+            <div class="user">
+                <div id="user-label" class="badge">Player</div>
+                <img id="user-choice1" src="Assets/rock.webp" alt="User Choice" hidden/>
+                <img id="user-choice2" src="Assets/paper.webp" alt="User Choice" hidden/>
+                <img id="user-choice3" src="Assets/scissor.webp" alt="User Choice" />
+            </div>
+            <div class="vs">VS</div>
+            <div class="computer">
+                <div id="computer-label" class="badge">Computer</div>
+                <img id="computer-choice1" src="Assets/rock.webp" alt="Computer Choice" hidden/>
+                <img id="computer-choice2" src="Assets/paper.webp" alt="Computer Choice"/>
+                <img id="computer-choice3" src="Assets/scissor.webp" alt="Computer Choice" hidden/>
+            </div>
+            
+            
+        </div>
+        <div class="score-board">
+            <span id="user-score">0</span>&nbsp;:&nbsp;<span id="computer-score">0</span>
+        </div>
+        <div class="move">
+            <p id="action-message">Make your move!</p>
+        </div>
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="Assets/rock.webp" alt="Rock" />
+            </div>
+            <div class="choice" id="paper">
+                <img src="Assets/paper.webp" alt="Paper" />
+            </div>
+            <div class="choice" id="scissors">
+                <img src="Assets/scissor.webp" alt="Scissors" />
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="rock_paper_scissor-logic.js"></script>
+</body>
+</html>
