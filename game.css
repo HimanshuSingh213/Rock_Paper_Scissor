@@ -76,13 +76,17 @@
  .transformScoreUser {
      display: flex;
      flex-direction: column;
-     height: 60px;
+    height: 60px;
+    transition: transform 300ms ease-in-out;
+    will-change: transform;
  }
 
  .transformScoreComp {
      display: flex;
      flex-direction: column;
-     height: 60px;
+    height: 60px;
+    transition: transform 300ms ease-in-out;
+    will-change: transform;
  }
 
  .score-board .score {
@@ -93,20 +97,6 @@
      height: 60px;
 
  }
-
- @keyframes ScoreSlideUp {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-.ScoreAnimation {
-    animation: ScoreSlideUp 0.5s linear forwards;
-    animation-fill-mode: forwards;
-}
 
  .choices {
      display: flex;
@@ -132,9 +122,7 @@
      color: #555;
  }
 
- .buttons {
-     margin-top: 20px;
- }
+
 
  button {
      padding: 10px 20px;
@@ -172,14 +160,10 @@
      transform: scale(1.1);
  }
 
- .buttons {
-     position: relative;
- }
-
  #reset {
-     position: absolute;
-     left: 47.5%;
-     bottom: 10%;
+     display: block;
+     margin: 0 auto;
+     margin-top: 20px;
      padding: 10px 20px;
      font-size: 16px;
      cursor: pointer;
@@ -199,4 +183,53 @@
  #reset:active {
      transition: transform 1.4s;
      transform: scale(0.2);
+ }
+
+ #newGame{
+    display: block;
+     margin: 0 auto;
+     margin-top: 20px;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     border: none;
+     border-radius: 8px;
+     color: white;
+     background-color: #fe8631;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ }
+
+ #newGame:hover {
+    background-color: #ffa05d;
+    transition: background-color 0.3s;
+
+}
+
+#newGame:active {
+    transition: transform 1.4s;
+    transform: scale(0.2);
+}
+
+ [hidden] { display: none !important; }
+ .youWon,
+ .youLost{
+   position: absolute;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    animation: fadeIn 1s ease-in-out;
+    animation: alternate;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.947);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
  }

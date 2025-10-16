@@ -61,25 +61,35 @@
                     <span class="score"> 10</span>
                 </div>
             </span>
-    </div>
-    <div class="move">
-        <p id="action-message">Make your move!</p>
-    </div>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="Assets/rock.webp" alt="Rock" />
         </div>
-        <div class="choice" id="paper">
-            <img src="Assets/paper.webp" alt="Paper" />
+        <div class="move">
+            <p id="action-message">Make your move!</p>
         </div>
-        <div class="choice" id="scissors">
-            <img src="Assets/scissor.webp" alt="Scissors" />
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="Assets/rock.webp" alt="Rock" />
+            </div>
+            <div class="choice" id="paper">
+                <img src="Assets/paper.webp" alt="Paper" />
+            </div>
+            <div class="choice" id="scissors">
+                <img src="Assets/scissor.webp" alt="Scissors" />
+            </div>
         </div>
     </div>
-    <div class="buttons">
-        <button id="reset">Reset</button>
-    </div>
-    </div>
+        <div class="buttons">
+            <button id="reset">Reset</button>
+        </div>
+        <div class="ending">
+            <div class="youWon" hidden>
+                <h2>You Won!</h2>
+                <button id="newGame">New Game</button>
+            </div>
+            <div class="youLost" hidden>
+                <h2>You Lost!</h2>
+                <button id="newGame">New Game</button>
+            </div>
+        </div>
 
     <script src="rock_paper_scissor-logic.js"></script>
 </body>
