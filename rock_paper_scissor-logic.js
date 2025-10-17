@@ -200,11 +200,7 @@ function scoreEvaluater(randomNum) {
 
     }
 
-    if ((scoreIncrementComp === 10) || (scoreIncrementUser === 10)) {
-        setTimeout(() => {
-            reset();
-        }, 2000);
-    }
+
     if(scoreIncrementComp === 10){
         setTimeout(() => {
             youLost.hidden = false;
